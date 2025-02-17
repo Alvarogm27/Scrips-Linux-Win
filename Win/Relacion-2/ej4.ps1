@@ -1,6 +1,6 @@
 # Ejercicio 4: Tabla de multiplicar
 # Pide al usuario que ingrese un número y muestra su tabla de multiplicar del 1 al 10.
-
+Write-Host "Tabla multiplicar del numero"
 $numero = [int](Read-Host "Numero")
 $r = 0
 while ($r -eq 0){
