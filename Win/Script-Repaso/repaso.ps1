@@ -7,7 +7,7 @@ function gestion_archivos{
     Write-Host "3 - Copiar un archivo a otra ubicacion"
     Write-Host "4 - Eliminar un archivo"
 
-    $gestion_archivos = Read-Host "Elige una opcion de la gestion de archivos: "
+    $gestion_archivos = Read-Host "Elige una opcion de la gestion de archivos"
 
     if ($gestion_archivos -eq "1"){
 
@@ -23,8 +23,7 @@ function gestion_archivos{
         }
     }
 
-    }
-    elif ($gestion_archivos -eq "2"){
+    if ($gestion_archivos -eq "2"){
 
         $ruta = Read-Host "Escribe la ruta del archivo que quieres mover de carpeta"
         $destino = Read-Host "Escribe la ruta de destino"
@@ -38,7 +37,7 @@ function gestion_archivos{
         }
     }
 
-    elif ($gestion_archivos -eq "3") {
+    if ($gestion_archivos -eq "3") {
         
         $ruta = Read-Host "Escribe la ruta del archivo que quieres copiar"
         $destino = Read-Host "Escribe la ruta de destino"
@@ -51,7 +50,7 @@ function gestion_archivos{
             Write-Host "No se ha encontrado la ruta o destino del archivo"
         }
     }
-    elif ($gestion_archivos -eq "4") {
+    if ($gestion_archivos -eq "4") {
         
         $ruta = Read-Host "Escribe la ruta del archivo que quieres eliminar"
 
@@ -61,9 +60,6 @@ function gestion_archivos{
         }
         else{
             Write-Host "Ruta no encontrada"
-        }
-    else{
-        Write-Host "No has elegido ninguna opcion"
+     }
     }
-
 }
