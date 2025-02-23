@@ -143,7 +143,7 @@ function gestion_usuarios{
         $nombre = Read-Host "Nombre del usuario que quieres eliminar"
         if (Get-LocalUser $nombre -ErrorAction SilentlyContinue){
             Remove-LocalUser -Name $nombre
-            Write "Usuario eliminado con exito"
+            Write-Host "Usuario eliminado con exito"
         }
         else{
             Write-Host "No se ha encontrado al usuario"
